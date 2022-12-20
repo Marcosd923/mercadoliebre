@@ -188,77 +188,79 @@ footer {
   text-align: left;
 }
 @media (min-width: 425px) {
-  .products {
-    width: 40%;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 6%; */
-  }
+  /* tablet  */
+
   main section article {
     display: flex;
     flex-direction: row;
     margin: 10px;
     flex-wrap: wrap;
   }
+  main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+}
 
-  @media (min-width: 769px) {
-    .nav-bar {
-      display: flex;
-      justify-content: space-between;
-      margin: 0 25px;
-    }
-    .burger-menu {
-      display: none;
-    }
-    .nav-bar ul {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-    }
-    article {
-      display: flex;
-      flex-direction: row;
-      margin: 10px;
-      flex-wrap: wrap;
-    }
-    .top-header {
-      justify-content: space-around;
-    }
-    header img {
-      max-width: 250px;
-    }
-    article div.main-article {
-      display: flex;
-      flex-direction: row;
-      margin: 10px;
-      flex-wrap: wrap;
-    }
-    main section article .descripcion {
-      display: block;
-      visibility: hidden;
-    }
-    article:hover {
-      box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
-    article:hover .descripcion {
-      visibility: visible;
-    }
+@media (min-width: 769px) {
+  /* desktop */
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 25px;
+  }
+  .burger-menu {
+    display: none;
+  }
+  .nav-bar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  article {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    flex-wrap: wrap;
+  }
+  .top-header {
+    justify-content: space-around;
+  }
+  header img {
+    max-width: 250px;
+  }
+  article div.main-article {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    flex-wrap: wrap;
+  }
+  main section article .descripcion {
+    display: block;
+    visibility: hidden;
+  }
+  article:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+  article:hover .descripcion {
+    visibility: visible;
+  }
 
-    article:hover i {
-      rotate: 90;
-    }
-    .products {
-      display: flex;
-      flex-direction: row;
-      margin: 0 auto;
-      justify-content: space-around;
-      width: 40%;
-    }
-    .footer-item {
-      display: flex;
-      justify-content: center;
-      padding: 50px;
-    }
+  article:hover i {
+    rotate: 90;
+  }
+  .products {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+  .footer-item {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
   }
 }

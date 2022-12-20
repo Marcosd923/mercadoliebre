@@ -71,58 +71,53 @@
       </div>
     </header>
     <main>
-        <form action="/registro" method="post">
-          <label for="NombreApellido"></label>
-          <input type="text" name="NombreApellido" placeholder="Nombre y apellido" class="formulario">
-
-          <label for="NombreUsuario"></label>
-          <input type="text" name="NombreUsuario" placeholder="Nombre de Usuario" class="formulario">
-
-          <label for="email"></label>
-          <input type="email" name="email" placeholder="E-mail" class="formulario">
-
-          <p>Fecha de nacimiento</p>
-
-          <label for="fechaNaciemiento"></label>
-          <input type="date" name="fechaNaciemiento" class="formulario">
-
-          <label for="domicilio"></label>
-          <input type="text" name="domicilio" placeholder="Domicilio" class="formulario">
-
-          <p>Perfil de usuario</p>
-
-          <label> 
-            <input type="radio" name="perfilUsuario" value="enviar"> Comprador
-            <input type="radio" name="perfilUsuario" value="enviar"> Vendedor
-          </label>
-
-          <p>Intereses</p>
-
-          <input type="checkbox" name="intereses" value="enviar"> Electro
-          <br>
-          <input type="checkbox" name="intereses" value="enviar"> Moda
-          <br>
-          <input type="checkbox" name="intereses" value="enviar"> Hogar
-          <br>
-          <input type="checkbox" name="intereses" value="enviar"> Jugueteria
-          <br>
-          <input type="checkbox" name="intereses" value="enviar"> Vida Sana
-          <br>
-          <p>Elegí tu foto de usuario</p>
-          <br>
-          <input type="file" name="avatar" accept=".jpg" multiple>
-          <br>
-          <label for="contraseña"></label>
-          <input type="password" name="contraseña" placeholder="Elegí tu contraseña" class="formulario">
-
-          <label for="contraseña"></label>
-          <input type="password" name="contraseña" placeholder="Repetí tu contraseña" class="formulario">
-
-          <button>Enviar</button>
-          <br>
-          <button>Borrar</button>
-
-        </form>
+      <form action="/register" method="POST">
+        <div class="titulares">
+            <h4>Registrate</h4>
+        </div>
+        <div class="form1">
+            
+            <input type="text" name="nombre" placeholder="Nombre y apellido" required minlength="5" maxlength="25" pattern="[A-Za-z]+" title="Solo letras">
+           
+            <input type="text" name="user" placeholder="Nombre de usuario" required minlength="5" maxlength="15" pattern="[A-Za-z0-9]+" title="Letras y números. Tamaño mínimo: 5. Tamaño máximo: 15">
+            
+            <input type="email" name="email" placeholder="Email" required >
+            
+            <input type="date" name="Fecha de nacimiento" min="1900-01-01" max="2022-12-31" required>
+            
+            <input type="text" name="domicilio" placeholder="domicilio" required minlength="5" maxlength="30" pattern="[A-Za-z0-9]+" title="Letras y números. Tamaño mínimo: 5. Tamaño máximo: 30">
+        </div>
+        <div class="radio-perfilUsuario">
+            <label>Perfil de usuario</label>
+            <div class="comprador-vendedor">
+            <input type="radio" name="perfilUsuario" value="Comprador"><div class="radio-text">Comprador</div></input>
+            <input type="radio" name="perfilUsuario" value="Vendedor"><div class="radio-text">Vendedor</div></input>
+        </div>
+        </div>
+        <div class="checkbox-intereses">
+            <label>Intereses</label>
+            <div class="opciones-intereses">
+            <input type="checkbox" name="intereses" value="Electro"><div class="checkbox-text">Electro</div></input>
+            <input type="checkbox" name="intereses" value="Moda"><div class="checkbox-text">Moda</div></input>
+            <input type="checkbox" name="intereses" value="Hogar"><div class="checkbox-text">Hogar</div></input>
+            <input type="checkbox" name="intereses" value="Juguetería"><div class="checkbox-text">Juguetería</div></input>
+            <input type="checkbox" name="intereses" value="Vida sana"><div class="checkbox-text">Vida Sana</div></input>
+        </div>
+        </div>
+        <div class="div-fotoperfil">
+            <label>Foto de perfil</label>
+            <input type="file" name="fotoPerfil" accept=".jpg">
+        </div>
+        <div class="form2">
+            <label>Creá tu contraseña</label>
+            <input type="password" name="contraseña" placeholder="Elegi tu contraseña" required minlength="8" maxlength="15" pattern="[A-Za-z0-9]+" title="Letras y números. Tamaño mínimo: 8. Tamaño máximo: 15">
+            <input type="password" name="confirmarContraseña" placeholder="Confirma tu contraseña" required minlength="8" maxlength="15" pattern="[A-Za-z0-9]+" title="Letras y números. Tamaño mínimo: 8. Tamaño máximo: 15">
+        </div>
+        <div class="botones">
+            <button class="buttonClass" type="reset">Enviar</button>
+            <button id="botonRojo"class="buttonClass" type="submit">Borrar</button>
+        </div>
+      </form>
     </main>
     <footer>
       <div class="footer-item">
